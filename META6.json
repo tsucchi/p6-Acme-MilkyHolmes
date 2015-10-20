@@ -1,13 +1,13 @@
 {
   "name" : "Acme::MilkyHolmes",
-  "source-url" : "",
+  "source-url" : "git://github.com/tsucchi/p6-Acme-MilkyHolmes.git",
   "perl" : "v6",
   "build-depends" : [ ],
   "provides" : {
     "Acme::MilkyHolmes" : "lib/Acme/MilkyHolmes.pm6"
   },
   "depends" : [ ],
-  "description" : "blah blah blah",
+  "description" : "There's more than one way to do it!(SEIKAI HA HITOTSU! JANAI!!)",
   "test-depends" : [ ],
   "version" : "*",
   "authors" : [
