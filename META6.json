@@ -1,0 +1,16 @@
+{
+  "name" : "Acme::MilkyHolmes",
+  "source-url" : "",
+  "perl" : "v6",
+  "build-depends" : [ ],
+  "provides" : {
+    "Acme::MilkyHolmes" : "lib/Acme/MilkyHolmes.pm6"
+  },
+  "depends" : [ ],
+  "description" : "blah blah blah",
+  "test-depends" : [ ],
+  "version" : "*",
+  "authors" : [
+    "Takuya Tsuchida"
+  ]
+}
