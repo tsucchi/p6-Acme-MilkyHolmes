@@ -18,31 +18,21 @@ Milky Holmes is one of the most famous Japanese TV animation. Acme::MilkyHolmes 
 SEE ALSO
 ========
 
-over
-====
-
-4
-
-  * * Milky Holmes Official Site
+  * Milky Holmes Official Site
 
 [http://milky-holmes.com/](http://milky-holmes.com/)
 
-  * * Project Milky Holmes (Wikipedia - ja)
+  * Project Milky Holmes (Wikipedia - ja)
 
 [http://ja.wikipedia.org/wiki/%E3%83%9F%E3%83%AB%E3%82%AD%E3%82%A3%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%BA](http://ja.wikipedia.org/wiki/%E3%83%9F%E3%83%AB%E3%82%AD%E3%82%A3%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%BA)
 
-  * * Milky Holmes (Wikipedia - en)
+  * Milky Holmes (Wikipedia - en)
 
 [http://en.wikipedia.org/wiki/Tantei_Opera_Milky_Holmes](http://en.wikipedia.org/wiki/Tantei_Opera_Milky_Holmes)
 
-  * * Acme::MilkyHolmes(perl5)
+  * Acme::MilkyHolmes(perl5)
 
 [https://metacpan.org/pod/Acme::MilkyHolmes](https://metacpan.org/pod/Acme::MilkyHolmes)
-
-back
-====
-
-
 
 AUTHOR
 ======
