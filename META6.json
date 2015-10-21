@@ -4,6 +4,7 @@
   "perl" : "v6",
   "build-depends" : [ ],
   "provides" : {
+    "Acme::MilkyHolmes::Character::SherlockShellingford" : "lib/Acme/MilkyHolmes/Character/SherlockShellingford.pm6",
     "Acme::MilkyHolmes" : "lib/Acme/MilkyHolmes.pm6"
   },
   "depends" : [ ],
