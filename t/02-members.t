@@ -87,15 +87,15 @@ subtest {
         my $sherlock = Acme::MilkyHolmes::Character::SherlockShellingford.new();
         $sherlock.locale = 'en';
         is( $sherlock.name,               'Sherlock Shellingford' );
-        #is( $sherlock.firstname,          'Sherlock' );
-        #is( $sherlock.familyname,         'Shellingford' );
-        #is( $sherlock.nickname,           'Sheryl' );
-        #is( $sherlock.birthday,           'March 31' );
-        #is( $sherlock.voiced_by,          'Suzuko Mimori' );
-        #is( $sherlock.nickname_voiced_by, 'mimorin' );
-        #is( $sherlock.toys,               'Psychokinesis' );
-        #is( $sherlock.color,              'pink' );
-        #ok( $sherlock.color_enable );
+        is( $sherlock.firstname,          'Sherlock' );
+        is( $sherlock.familyname,         'Shellingford' );
+        is( $sherlock.nickname,           'Sheryl' );
+        is( $sherlock.birthday,           'March 31' );
+        is( $sherlock.voiced_by,          'Suzuko Mimori' );
+        is( $sherlock.nickname_voiced_by, 'mimorin' );
+        is( $sherlock.toys,               'Psychokinesis' );
+        is( $sherlock.color,              'pink' );
+        ok( $sherlock.color_enable );
     }, 'en';
 
 #    subtest 'ja', sub {
