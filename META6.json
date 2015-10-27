@@ -5,7 +5,8 @@
   "build-depends" : [ ],
   "provides" : {
     "Acme::MilkyHolmes::Character::SherlockShellingford" : "lib/Acme/MilkyHolmes/Character/SherlockShellingford.pm6",
-    "Acme::MilkyHolmes" : "lib/Acme/MilkyHolmes.pm6"
+    "Acme::MilkyHolmes" : "lib/Acme/MilkyHolmes.pm6",
+    "Acme::MilkyHolmes::Character::NeroYuzurizaki" : "lib/Acme/MilkyHolmes/Character/NeroYuzurizaki.pm6"
   },
   "depends" : [ ],
   "description" : "There's more than one way to do it!(SEIKAI HA HITOTSU! JANAI!!)",

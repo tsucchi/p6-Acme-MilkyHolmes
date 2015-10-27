@@ -98,55 +98,56 @@ subtest {
         ok( $sherlock.color_enable );
     }, 'en';
 
-#    subtest 'ja', sub {
-#        my $sherlock = Acme::MilkyHolmes::Character::SherlockShellingford->new();
-#        is( $sherlock->locale,             'ja' );
-#        is( $sherlock->name,               'シャーロック・シェリンフォード' );
-#        is( $sherlock->firstname,          'シャーロック' );
-#        is( $sherlock->familyname,         'シェリンフォード' );
-#        is( $sherlock->nickname,           'シャロ' );
-#        is( $sherlock->birthday,           '3/31' );
-#        is( $sherlock->voiced_by,          '三森 すずこ' );
-#        is( $sherlock->nickname_voiced_by, 'みもりん' );
-#        is( $sherlock->toys,               'サイコキネシス' );
-#        is( $sherlock->color,              'pink' );
-#        ok( $sherlock->color_enable );
-#    };
+	subtest {
+		my $sherlock = Acme::MilkyHolmes::Character::SherlockShellingford.new();
+		is( $sherlock.locale,             'ja');
+		is( $sherlock.name,               'シャーロック・シェリンフォード' );
+		is( $sherlock.firstname,          'シャーロック' );
+		is( $sherlock.familyname,         'シェリンフォード' );
+		is( $sherlock.nickname,           'シャロ' );
+		is( $sherlock.birthday,           '3/31' );
+		is( $sherlock.voiced_by,          '三森 すずこ' );
+		is( $sherlock.nickname_voiced_by, 'みもりん' );
+		is( $sherlock.toys,               'サイコキネシス' );
+		is( $sherlock.color,              'pink' );
+		ok( $sherlock.color_enable );
+	}, 'ja';
 }, 'Sherlock';
 
 
 
-#subtest 'Nero', sub {
-#    subtest 'en', sub {
-#        my $nero = Acme::MilkyHolmes::Character::NeroYuzurizaki->new();
-#        $nero->locale('en');
-#        is( $nero->name,               'Nero Yuzurizaki' );
-#        is( $nero->firstname,          'Nero' );
-#        is( $nero->familyname,         'Yuzurizaki' );
-#        is( $nero->nickname,           'Nero' );
-#        is( $nero->birthday,           'August 28' );
-#        is( $nero->voiced_by,          'Sora Tokui' );
-#        is( $nero->nickname_voiced_by, 'soramaru' );
-#        is( $nero->toys,               'Direct Hack' );
-#        is( $nero->color,              'yellow' );
-#        ok( $nero->color_enable );
-#    };
+subtest {
+   subtest {
+       use Acme::MilkyHolmes::Character::NeroYuzurizaki;
+       my $nero = Acme::MilkyHolmes::Character::NeroYuzurizaki.new();
+       $nero.locale = 'en';
+       is( $nero.name,               'Nero Yuzurizaki' );
+       is( $nero.firstname,          'Nero' );
+       is( $nero.familyname,         'Yuzurizaki' );
+       is( $nero.nickname,           'Nero' );
+       is( $nero.birthday,           'August 28' );
+       is( $nero.voiced_by,          'Sora Tokui' );
+       is( $nero.nickname_voiced_by, 'soramaru' );
+       is( $nero.toys,               'Direct Hack' );
+       is( $nero.color,              'yellow' );
+       ok( $nero.color_enable );
+   }, 'en';
 
-#    subtest 'ja', sub {
-#        my $nero = Acme::MilkyHolmes::Character::NeroYuzurizaki->new();
-#        is( $nero->locale,             'ja' );
-#        is( $nero->name,               '譲崎 ネロ' );
-#        is( $nero->firstname,          'ネロ' );
-#        is( $nero->familyname,         '譲崎' );
-#        is( $nero->nickname,           'ネロ' );
-#        is( $nero->birthday,           '8/28' );
-#        is( $nero->voiced_by,          '徳井 青空' );
-#        is( $nero->nickname_voiced_by, 'そらまる' );
-#        is( $nero->toys,               'ダイレクトハック' );
-#        is( $nero->color,              'yellow' );
-#        ok( $nero->color_enable );
-#    };
-#};
+   subtest {
+       my $nero = Acme::MilkyHolmes::Character::NeroYuzurizaki.new();
+       is( $nero.locale,             'ja' );
+       is( $nero.name,               '譲崎 ネロ' );
+       is( $nero.firstname,          'ネロ' );
+       is( $nero.familyname,         '譲崎' );
+       is( $nero.nickname,           'ネロ' );
+       is( $nero.birthday,           '8/28' );
+       is( $nero.voiced_by,          '徳井 青空' );
+       is( $nero.nickname_voiced_by, 'そらまる' );
+       is( $nero.toys,               'ダイレクトハック' );
+       is( $nero.color,              'yellow' );
+       ok( $nero.color_enable );
+   }, 'ja';
+}, 'Nero';
 
 
 #subtest 'Elly', sub {

@@ -1,34 +1,37 @@
 use v6;
 
-class Acme::MilkyHolmes::Character::SherlockShellingford {
+class Acme::MilkyHolmes::Character::NeroYuzurizaki {
     has Str $.locale is rw = 'ja';
 	has $!data = {
 		common => {
-			color =>  'pink',
+			color =>  'yellow',
 		},
 		en => {
-			firstname          => 'Sherlock',
-			familyname         => 'Shellingford',
-			nickname           => 'Sheryl',
-			birthday           => 'March 31',
-			voiced_by          => 'Suzuko Mimori',
-			nickname_voiced_by => 'mimorin',
-			toys               => 'Psychokinesis',
+			firstname          => 'Nero',
+			familyname         => 'Yuzurizaki',
+			nickname           => 'Nero',
+			birthday           => 'August 28',
+			voiced_by          => 'Sora Tokui',
+			nickname_voiced_by => 'soramaru',
+			toys               => 'Direct Hack',
 			name_separator     => ' ',
 		},
 		ja => {
-			firstname          => 'シャーロック',
-			familyname         => 'シェリンフォード',
-			nickname           => 'シャロ',
-			birthday           => '3/31',
-			voiced_by          => '三森 すずこ',
-			nickname_voiced_by => 'みもりん',
-			toys               => 'サイコキネシス',
-			name_separator     => '・',
+			firstname          => 'ネロ',
+			familyname         => '譲崎',
+			nickname           => 'ネロ',
+			birthday           => '8/28',
+			voiced_by          => '徳井 青空',
+			nickname_voiced_by => 'そらまる',
+			toys               => 'ダイレクトハック',
+			name_separator     => ' ',
 		},
 	};
 
     method name() {
+		if $.locale eq 'ja' && $!data.{$.locale}.<name_separator> eq ' ' {
+			return self.familyname() ~ $!data.{$.locale}.<name_separator>  ~ self.firstname();
+		}
 		return self.firstname() ~ $!data.{$.locale}.<name_separator>  ~ self.familyname();
     }
     method firstname() {
