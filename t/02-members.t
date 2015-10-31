@@ -3,6 +3,11 @@ use Acme::MilkyHolmes;
 use Test;
 #use utf8;
 
+use Acme::MilkyHolmes::Character::SherlockShellingford;
+use Acme::MilkyHolmes::Character::NeroYuzurizaki;
+use Acme::MilkyHolmes::Character::HerculeBarton;
+
+
 #subtest 'members - milkyholmes', sub {
 #    subtest 'en', sub {
 #        my @milkyholmes = Acme::MilkyHolmes->members( locale => 'en' );
@@ -83,7 +88,6 @@ use Test;
 
 subtest {
     subtest {
-        use Acme::MilkyHolmes::Character::SherlockShellingford;
         my $sherlock = Acme::MilkyHolmes::Character::SherlockShellingford.new();
         $sherlock.locale = 'en';
         is( $sherlock.name,               'Sherlock Shellingford' );
@@ -118,7 +122,6 @@ subtest {
 
 subtest {
    subtest {
-       use Acme::MilkyHolmes::Character::NeroYuzurizaki;
        my $nero = Acme::MilkyHolmes::Character::NeroYuzurizaki.new();
        $nero.locale = 'en';
        is( $nero.name,               'Nero Yuzurizaki' );
@@ -150,37 +153,37 @@ subtest {
 }, 'Nero';
 
 
-#subtest 'Elly', sub {
-#    subtest 'en', sub {
-#        my $elly = Acme::MilkyHolmes::Character::HerculeBarton->new();
-#        $elly->locale('en');
-#        is( $elly->name,               'Hercule Barton' );
-#        is( $elly->firstname,          'Hercule' );
-#        is( $elly->familyname,         'Barton' );
-#        is( $elly->nickname,           'Elly' );
-#        is( $elly->birthday,           'October 21' );
-#        is( $elly->voiced_by,          'Mikoi Sasaki' );
-#        is( $elly->nickname_voiced_by, 'mikoron' );
-#        is( $elly->toys,               'Tri-Ascend' );
-#        is( $elly->color,              'green' );
-#        ok( $elly->color_enable );
-#    };
+subtest {
+   subtest {
+       my $elly = Acme::MilkyHolmes::Character::HerculeBarton.new();
+       $elly.locale = 'en';
+       is( $elly.name,               'Hercule Barton' );
+       is( $elly.firstname,          'Hercule' );
+       is( $elly.familyname,         'Barton' );
+       is( $elly.nickname,           'Elly' );
+       is( $elly.birthday,           'October 21' );
+       is( $elly.voiced_by,          'Mikoi Sasaki' );
+       is( $elly.nickname_voiced_by, 'mikoron' );
+       is( $elly.toys,               'Tri-Ascend' );
+       is( $elly.color,              'green' );
+       ok( $elly.color_enable );
+   }, 'en';
 
-#    subtest 'ja', sub {
-#        my $elly = Acme::MilkyHolmes::Character::HerculeBarton->new();
-#        is( $elly->locale,             'ja' );
-#        is( $elly->name,               'エルキュール・バートン' );
-#        is( $elly->firstname,          'エルキュール' );
-#        is( $elly->familyname,         'バートン' );
-#        is( $elly->nickname,           'エリー' );
-#        is( $elly->birthday,           '10/21' );
-#        is( $elly->voiced_by,          '佐々木 未来' );
-#        is( $elly->nickname_voiced_by, 'みころん' );
-#        is( $elly->toys,               'トライアセンド' );
-#        is( $elly->color,              'green' );
-#        ok( $elly->color_enable );
-#    };
-#};
+   subtest {
+       my $elly = Acme::MilkyHolmes::Character::HerculeBarton.new();
+       is( $elly.locale,             'ja' );
+       is( $elly.name,               'エルキュール・バートン' );
+       is( $elly.firstname,          'エルキュール' );
+       is( $elly.familyname,         'バートン' );
+       is( $elly.nickname,           'エリー' );
+       is( $elly.birthday,           '10/21' );
+       is( $elly.voiced_by,          '佐々木 未来' );
+       is( $elly.nickname_voiced_by, 'みころん' );
+       is( $elly.toys,               'トライアセンド' );
+       is( $elly.color,              'green' );
+       ok( $elly.color_enable );
+   }, 'ja';
+}, 'Elly';
 
 #subtest 'Cordelia', sub {
 #    subtest 'en', sub {
