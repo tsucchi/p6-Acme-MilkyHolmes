@@ -5,6 +5,7 @@
   "build-depends" : [ ],
   "provides" : {
     "Acme::MilkyHolmes::Character::HerculeBarton" : "lib/Acme/MilkyHolmes/Character/HerculeBarton.pm6",
+    "Acme::MilkyHolmes::Character::CordeliaGlauca" : "lib/Acme/MilkyHolmes/Character/CordeliaGlauca.pm6",
     "Acme::MilkyHolmes::Character::SherlockShellingford" : "lib/Acme/MilkyHolmes/Character/SherlockShellingford.pm6",
     "Acme::MilkyHolmes::Character" : "lib/Acme/MilkyHolmes/Character.pm",
     "Acme::MilkyHolmes" : "lib/Acme/MilkyHolmes.pm6",

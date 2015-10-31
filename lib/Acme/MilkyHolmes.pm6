@@ -1,5 +1,20 @@
 use v6;
-unit class Acme::MilkyHolmes;
+
+use Acme::MilkyHolmes::Character::SherlockShellingford;
+use Acme::MilkyHolmes::Character::NeroYuzurizaki;
+use Acme::MilkyHolmes::Character::HerculeBarton;
+use Acme::MilkyHolmes::Character::CordeliaGlauca;
+
+class Acme::MilkyHolmes {
+	method members( :$locale = 'ja' ) {
+		return (
+			Acme::MilkyHolmes::Character::SherlockShellingford.new( locale => $locale ),
+			Acme::MilkyHolmes::Character::NeroYuzurizaki.new(  locale => $locale ),
+			Acme::MilkyHolmes::Character::HerculeBarton.new( locale => $locale ),
+			Acme::MilkyHolmes::Character::CordeliaGlauca.new( locale => $locale ),
+		);
+	}
+}
 
 
 =begin pod

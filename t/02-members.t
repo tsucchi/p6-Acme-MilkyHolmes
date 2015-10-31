@@ -1,31 +1,30 @@
 use v6;
 use Acme::MilkyHolmes;
 use Test;
-#use utf8;
 
 use Acme::MilkyHolmes::Character::SherlockShellingford;
 use Acme::MilkyHolmes::Character::NeroYuzurizaki;
 use Acme::MilkyHolmes::Character::HerculeBarton;
+use Acme::MilkyHolmes::Character::CordeliaGlauca;
 
-
-#subtest 'members - milkyholmes', sub {
-#    subtest 'en', sub {
-#        my @milkyholmes = Acme::MilkyHolmes->members( locale => 'en' );
-#        is( scalar(@milkyholmes), 4);
-#        is( $milkyholmes[0]->name, 'Sherlock Shellingford' );
-#        is( $milkyholmes[1]->name, 'Nero Yuzurizaki' );
-#        is( $milkyholmes[2]->name, 'Hercule Barton' );
-#        is( $milkyholmes[3]->name, 'Cordelia Glauca' );
-#    };
-#    subtest 'default - ja', sub {
-#        my @milkyholmes = Acme::MilkyHolmes->members();
-#        is( scalar(@milkyholmes), 4);
-#        is( $milkyholmes[0]->name, 'シャーロック・シェリンフォード' );
-#        is( $milkyholmes[1]->name, '譲崎 ネロ' );
-#        is( $milkyholmes[2]->name, 'エルキュール・バートン' );
-#        is( $milkyholmes[3]->name, 'コーデリア・グラウカ' );
-#    };
-#};
+subtest {
+   subtest {
+       my @milkyholmes = Acme::MilkyHolmes.members( locale => 'en' );
+       is( @milkyholmes.elems, 4);
+       is( @milkyholmes[0].name, 'Sherlock Shellingford' );
+       is( @milkyholmes[1].name, 'Nero Yuzurizaki' );
+       is( @milkyholmes[2].name, 'Hercule Barton' );
+       is( @milkyholmes[3].name, 'Cordelia Glauca' );
+   }, 'en';
+   subtest {
+       my @milkyholmes = Acme::MilkyHolmes.members();
+       is( @milkyholmes.elems, 4);
+       is( @milkyholmes[0].name, 'シャーロック・シェリンフォード' );
+       is( @milkyholmes[1].name, '譲崎 ネロ' );
+       is( @milkyholmes[2].name, 'エルキュール・バートン' );
+       is( @milkyholmes[3].name, 'コーデリア・グラウカ' );
+   }, 'default - ja';
+}, 'members - milkyholmes';
 
 #subtest 'members_of - milkyholmes', sub {
 #    subtest 'en', sub {
@@ -185,37 +184,37 @@ subtest {
    }, 'ja';
 }, 'Elly';
 
-#subtest 'Cordelia', sub {
-#    subtest 'en', sub {
-#        my $cordelia = Acme::MilkyHolmes::Character::CordeliaGlauca->new();
-#        $cordelia->locale('en');
-#        is( $cordelia->name,               'Cordelia Glauca' );
-#        is( $cordelia->firstname,          'Cordelia' );
-#        is( $cordelia->familyname,         'Glauca' );
-#        is( $cordelia->nickname,           'Cordelia' );
-#        is( $cordelia->birthday,           'December 19' );
-#        is( $cordelia->voiced_by,          'Izumi Kitta' );
-#        is( $cordelia->nickname_voiced_by, 'izusama' );
-#        is( $cordelia->toys,               'Hyper Sensitive' );
-#        is( $cordelia->color,              'blue' );
-#        ok( $cordelia->color_enable );
-#    };
-#
-#    subtest 'ja', sub {
-#        my $cordelia = Acme::MilkyHolmes::Character::CordeliaGlauca->new();
-#        is( $cordelia->locale,             'ja' );
-#        is( $cordelia->name,               'コーデリア・グラウカ' );
-#        is( $cordelia->firstname,          'コーデリア' );
-#        is( $cordelia->familyname,         'グラウカ' );
-#        is( $cordelia->nickname,           'コーデリア' );
-#        is( $cordelia->birthday,           '12/19' );
-#        is( $cordelia->voiced_by,          '橘田 いずみ' );
-#        is( $cordelia->nickname_voiced_by, 'いず様' );
-#        is( $cordelia->toys,               'ハイパーセンシティブ' );
-#        is( $cordelia->color,              'blue' );
-#        ok( $cordelia->color_enable );
-#    };
-#};
+subtest {
+   subtest {
+       my $cordelia = Acme::MilkyHolmes::Character::CordeliaGlauca.new();
+       $cordelia.locale = 'en';
+       is( $cordelia.name,               'Cordelia Glauca' );
+       is( $cordelia.firstname,          'Cordelia' );
+       is( $cordelia.familyname,         'Glauca' );
+       is( $cordelia.nickname,           'Cordelia' );
+       is( $cordelia.birthday,           'December 19' );
+       is( $cordelia.voiced_by,          'Izumi Kitta' );
+       is( $cordelia.nickname_voiced_by, 'izusama' );
+       is( $cordelia.toys,               'Hyper Sensitive' );
+       is( $cordelia.color,              'blue' );
+       ok( $cordelia.color_enable );
+   }, 'en';
+
+   subtest {
+       my $cordelia = Acme::MilkyHolmes::Character::CordeliaGlauca.new();
+       is( $cordelia.locale,             'ja' );
+       is( $cordelia.name,               'コーデリア・グラウカ' );
+       is( $cordelia.firstname,          'コーデリア' );
+       is( $cordelia.familyname,         'グラウカ' );
+       is( $cordelia.nickname,           'コーデリア' );
+       is( $cordelia.birthday,           '12/19' );
+       is( $cordelia.voiced_by,          '橘田 いずみ' );
+       is( $cordelia.nickname_voiced_by, 'いず様' );
+       is( $cordelia.toys,               'ハイパーセンシティブ' );
+       is( $cordelia.color,              'blue' );
+       ok( $cordelia.color_enable );
+   }, 'ja';
+}, 'Cordelia';
 
 #subtest 'Kazumi', sub {
 #    subtest 'en', sub {
@@ -281,5 +280,4 @@ subtest {
 #    };
 #};
 
-pass "fixme";
 done-testing;
