@@ -4,7 +4,7 @@ use Acme::MilkyHolmes::Character;
 class Acme::MilkyHolmes::Character::NeroYuzurizaki is Acme::MilkyHolmes::Character {
 
 	submethod BUILD() {
-		my $data = {
+		self.set_data({
 			common => {
 				color =>  'yellow',
 			},
@@ -28,8 +28,7 @@ class Acme::MilkyHolmes::Character::NeroYuzurizaki is Acme::MilkyHolmes::Charact
 				toys               => 'ダイレクトハック',
 				name_separator     => ' ',
 			},
-		};
-		self.set_data($data);
+		});
 	}
 }
 
